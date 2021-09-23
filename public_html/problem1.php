@@ -5,9 +5,15 @@ $a3 = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0];
 $a4 = [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
 function processArray($arr) {
     //use the $arr variable to iterate over
+    foreach ($arr as $value ){  //use the $arr variable to iterate over
+        if ($value % 2 != 0){   //TODO add logic here to echo out only odd values
+            echo $value;
+        }
+    
+    }
     echo "<br>Processing Array:<br><pre>" . var_export($arr, true) . "</pre>";
     echo "<br>Odds output:<br>";
-    //TODO add logic here to echo out only odd values
+    
 
 }
 echo "Problem 1: Odd Output<br>";
