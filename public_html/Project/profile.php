@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__ . "/../../partials/nav.php");
+require_once(__DIR__ . "../../../partials/nav.php");
 if (!is_logged_in()) {
     die(header("Location: login.php"));
 }
@@ -30,7 +30,7 @@ if (isset($_POST["save"])) {
         }
     }
     //select fresh data from table
-    $stmt = $db->prepare("SELECT id, email, username from Users where id = :id LIMIT 1");
+    $stmt = $db->prepare("SELECT id, email, IFNULL(username, email) as `username` from Users where id = :id LIMIT 1");
     try {
         $stmt->execute([":id" => get_user_id()]);
         $user = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -123,25 +123,24 @@ $username = get_username();
         //find the flash container, create a new element, appendChild
         if (pw !== con) {
             //find the container
-            let flash = document.getElementById("flash");
+            /*let flash = document.getElementById("flash");
             //create a div (or whatever wrapper we want)
             let outerDiv = document.createElement("div");
             outerDiv.className = "row justify-content-center";
             let innerDiv = document.createElement("div");
-
             //apply the CSS (these are bootstrap classes which we'll learn later)
             innerDiv.className = "alert alert-warning";
             //set the content
             innerDiv.innerText = "Password and Confirm password must match";
-
             outerDiv.appendChild(innerDiv);
             //add the element to the DOM (if we don't it merely exists in memory)
-            flash.appendChild(outerDiv);
+            flash.appendChild(outerDiv);*/
+            flash("Password and Confirm password must match", "warning");
             isValid = false;
         }
         return isValid;
     }
 </script>
 <?php
-require_once(__DIR__ . "/../../partials/flash.php");
+require_once(__DIR__ . "../../../partials/flash.php");
 ?>
