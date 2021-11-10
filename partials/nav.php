@@ -31,3 +31,39 @@ require_once(__DIR__ . "/../lib/functions.php");
         <?php endif; ?>
     </ul>
 </nav>
+
+<style>
+        nav ul{     /* background color */
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{  /* list horizontal + remove bullet*/
+            display: inline-block;
+            list-style: none;
+        }
+        nav li a{  /* background  */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover{   /* change color on hover*/
+            color: blue;
+        }
+
+        ul li{     /* change bullet to checks */
+            list-style: '✓';
+        }
+
+        h1{
+            text-transform: capitalize;
+            
+        }
+
+        a{
+            text-transform: capitalize; 
+        }
+        /* TODO: make edits here */
+    </style>
