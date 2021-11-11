@@ -45,4 +45,29 @@ require_once(__DIR__ . "/../lib/functions.php");
             <li><a href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
         <?php endif; ?>
     </ul>
+
+    <style>
+        nav ul{     /* background color */
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{  /* list horizontal */
+            display: inline-block;
+        }
+        nav li a{  /* background  */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover{   /* change color on hover*/
+            color: blue;
+        }
+        body{
+            background-color: #FAEBD7;
+        }
+    </style>
+
 </nav>
