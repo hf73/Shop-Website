@@ -12,7 +12,7 @@ require(__DIR__ . "/../../partials/nav.php"); ?>
     <input type="submit" value="Login" />
 </form>
 <script>
-    function validate(form) {
+    function validate(form) { 
         //TODO 1: implement JavaScript validation
         //ensure it returns false for an error and true for success
 
