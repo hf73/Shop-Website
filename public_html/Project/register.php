@@ -1,15 +1,21 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
 reset_session();
+$email = se($_POST, "email", "", false);
+$username = se($_POST, "username", "", false);
 ?>
+<div class="container-fluid">
+    <h1>Register</h1>
 <form onsubmit="return validate(this)" method="POST">
-    <div>
-        <label for="email">Email</label>
-        <input type="email" name="email" required />
+    <div class=mb-3>
+        <label class="form-label" for="email">Email</label>
+        <input class="form-control" type="email" name="email" required 
+        required value="<?php se($email);?>" />
     </div>
-    <div>
-        <label for="username">Username</label>
-        <input type="text" name="username" required maxlength="30" />
+    <div class=mb-3>
+        <label class ="form-label" for="username">Username</label>
+        <input class="form-control" type="text" name="username" required maxlength="30"
+        required value="<?php se($username);?>" />
     </div>
     <div>
         <label for="pw">Password</label>
