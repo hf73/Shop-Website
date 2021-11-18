@@ -31,6 +31,7 @@ require_once(__DIR__ . "/../lib/functions.php");
         <?php if (is_logged_in()) : ?>
             <li><a href="<?php echo get_url('home.php'); ?>">Home</a></li>
             <li><a href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+            <li><a href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
         <?php endif; ?>
         <?php if (!is_logged_in()) : ?>
             <li><a href="<?php echo get_url('login.php'); ?>">Login</a></li>
@@ -41,7 +42,6 @@ require_once(__DIR__ . "/../lib/functions.php");
             <li><a href="<?php echo get_url('admin/list_roles.php'); ?>">List Roles</a></li>
             <li><a href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
             <li><a href="<?php echo get_url('admin/add_item.php'); ?>">Add Item</a></li>
-            <li><a href="<?php echo get_url('admin/edit_item.php'); ?>">Edit Item</a></li>
             <li><a href="<?php echo get_url('admin/list_item.php'); ?>">List Item</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
@@ -49,3 +49,27 @@ require_once(__DIR__ . "/../lib/functions.php");
         <?php endif; ?>
     </ul>
 </nav>
+
+<style>
+        nav ul{     /* background color */
+            background-color: black;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li{  /* list horizontal */
+            display: inline-block;
+        }
+        nav li a{  /* background  */
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav li a:hover{   /* change color on hover*/
+            color: blue;
+        }
+        body{
+            background-color: #FAEBD7;
+        }
+    </style>
