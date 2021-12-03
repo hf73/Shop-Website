@@ -1,4 +1,4 @@
-<?php 
+<?php
 //Note: this is to resolve cookie issues with port numbers
 $domain = $_SERVER["HTTP_HOST"];
 if (strpos($domain, ":")) {
@@ -23,6 +23,8 @@ session_start();
 require_once(__DIR__ . "/../lib/functions.php");
 
 ?>
+
+
 <!-- include css and js files -->
 <link rel="stylesheet" href="<?php echo get_url('styles.css'); ?>">
 <script src="<?php echo get_url('helpers.js'); ?>"></script>
@@ -31,22 +33,27 @@ require_once(__DIR__ . "/../lib/functions.php");
         <?php if (is_logged_in()) : ?>
             <li><a href="<?php echo get_url('home.php'); ?>">Home</a></li>
             <li><a href="<?php echo get_url('profile.php'); ?>">Profile</a></li>
+            <li><a href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
         <?php endif; ?>
-        <?php if (!is_logged_in()) : ?> 
+        <?php if (!is_logged_in()) : ?>
             <li><a href="<?php echo get_url('login.php'); ?>">Login</a></li>
             <li><a href="<?php echo get_url('register.php'); ?>">Register</a></li>
+            <li><a href="<?php echo get_url('shop.php'); ?>">Shop</a></li>
         <?php endif; ?>
         <?php if (has_role("Admin")) : ?>
             <li><a href="<?php echo get_url('admin/create_role.php'); ?>">Create Role</a></li>
             <li><a href="<?php echo get_url('admin/list_roles.php'); ?>">List Roles</a></li>
             <li><a href="<?php echo get_url('admin/assign_roles.php'); ?>">Assign Roles</a></li>
+            <li><a href="<?php echo get_url('admin/add_item.php'); ?>">Add Item</a></li>
+            <li><a href="<?php echo get_url('admin/list_item.php'); ?>">List Item</a></li>
         <?php endif; ?>
         <?php if (is_logged_in()) : ?>
             <li><a href="<?php echo get_url('logout.php'); ?>">Logout</a></li>
         <?php endif; ?>
     </ul>
+</nav>
 
-    <style>
+<style>
         nav ul{     /* background color */
             background-color: black;
             padding: 0;
@@ -69,5 +76,3 @@ require_once(__DIR__ . "/../lib/functions.php");
             background-color: #FAEBD7;
         }
     </style>
-
-</nav>
