@@ -30,7 +30,7 @@ if (!empty($name)) {
 //apply column and order sort
 if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
-}
+} 
 //get the total
 $stmt = $db->prepare($total_query . $query);
 $total = 0;
