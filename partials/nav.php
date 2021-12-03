@@ -23,6 +23,8 @@ session_start();
 require_once(__DIR__ . "/../lib/functions.php");
 
 ?>
+
+
 <!-- include css and js files -->
 <link rel="stylesheet" href="<?php echo get_url('styles.css'); ?>">
 <script src="<?php echo get_url('helpers.js'); ?>"></script>
