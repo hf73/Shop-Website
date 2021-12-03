@@ -11,7 +11,7 @@ if (isset($_POST["submit"])) {
     if ($id > 0) {
         flash("Created Item with id $id", "success");
     }
-}
+} 
 //get the table definition
 $columns = get_columns("Products");
 //echo "<pre>" . var_export($columns, true) . "</pre>";
@@ -31,7 +31,7 @@ $ignore = ["id", "modified", "created"];
         <?php endforeach; ?>
         <input class="btn btn-primary" type="submit" value="Create" name="submit" />
     </form>
-</div>
+</div> 
 <?php
 //note we need to go up 1 more directory
 require_once(__DIR__ . "/../../../partials/flash.php");
