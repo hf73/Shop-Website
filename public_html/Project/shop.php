@@ -50,7 +50,7 @@ $per_page = 10; //how many items to show per page (hint, this could also be some
 $offset = ($page - 1) * $per_page;
 $query .= " LIMIT :offset, :count";
 $params[":offset"] = $offset;
-$params[":count"] = $per_page;
+$params[":count"] = $per_page; 
 //get the records
 $stmt = $db->prepare($base_query . $query); //dynamically generated query
 //we'll want to convert this to use bindValue so ensure they're integers so lets map our array
