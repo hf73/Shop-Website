@@ -6,7 +6,7 @@ if (!has_role("Admin")) {
     flash("You don't have permission to view this page", "warning");
     die(header("Location: $BASE_PATH" . "home.php"));
 }
-
+ 
 $results = [];
 if (isset($_POST["itemName"])) {
     $db = getDB();

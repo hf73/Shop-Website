@@ -11,7 +11,7 @@ if (isset($_POST["submit"])) {
     if ($id > 0) {
         flash("Created Item with id $id", "success");
     }
-}
+} 
 //get the table definition
 $columns = get_columns("Products");
 //echo "<pre>" . var_export($columns, true) . "</pre>";
