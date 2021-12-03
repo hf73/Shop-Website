@@ -103,6 +103,7 @@ function reset_session()
 {
     session_unset();
     session_destroy();
+     session_start(); 
 }
 function users_check_duplicate($errorInfo)
 {
@@ -123,7 +124,7 @@ function users_check_duplicate($errorInfo)
 function get_url($dest)
 {
     global $BASE_PATH;
-    if (str_starts_with($dest, "/")) {
+    if (str_starts_with($dest, "/"))  {
         //handle absolute path
         return $dest;
     }
