@@ -1,12 +1,12 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
- 
+
 $results = [];
 $db = getDB();
 //Sort and Filters
 $col = se($_GET, "col", "cost", false);
 //allowed list
-if (!in_array($col, ["cost", "stock", "name", "category"])) {
+if (!in_array($col, ["cost", "stock", "name", "created"])) {
     $col = "cost"; //default value, prevent sql injection
 }
 $order = se($_GET, "order", "asc", false);
@@ -15,12 +15,8 @@ if (!in_array($order, ["asc", "desc"])) {
     $order = "asc"; //default value, prevent sql injection
 }
 $name = se($_GET, "name", "", false);
-
-//split query into data and total
-$base_query = "SELECT id, name, description, cost, stock, image FROM Products items"; //1=1 shortcut to conditionally build AND clauses
-$total_query = "SELECT count(1) as total FROM Products items";
 //dynamic query
-$query = " WHERE 1=1 and stock > 0 and visibility >0"; //1=1 shortcut to conditionally build AND clauses
+$query = "SELECT id, name, description, cost, stock, image FROM Products items WHERE 1=1 and stock > 0 and visibility > 0"; //1=1 shortcut to conditionally build AND clauses
 $params = []; //define default params, add keys as needed and pass to execute
 //apply name filter
 if (!empty($name)) {
@@ -30,36 +26,8 @@ if (!empty($name)) {
 //apply column and order sort
 if (!empty($col) && !empty($order)) {
     $query .= " ORDER BY $col $order"; //be sure you trust these values, I validate via the in_array checks above
-} 
-//get the total
-$stmt = $db->prepare($total_query . $query);
-$total = 0;
-try {
-    $stmt->execute($params);
-    $r = $stmt->fetch(PDO::FETCH_ASSOC);
-    if ($r) {
-        $total = (int)se($r, "total", 0, false);
-    }
-} catch (PDOException $e) {
-    flash("<pre>" . var_export($e, true) . "</pre>");
 }
-
-$page = se($_GET, "page", 1, false); //default to page 1 (human readable number)
-$per_page = 10; //how many items to show per page (hint, this could also be something the user can change via a dropdown or similar)
-$offset = ($page - 1) * $per_page;
-$query .= " LIMIT :offset, :count";
-$params[":offset"] = $offset;
-$params[":count"] = $per_page;
-//get the records
-$stmt = $db->prepare($base_query . $query); //dynamically generated query
-//we'll want to convert this to use bindValue so ensure they're integers so lets map our array
-foreach ($params as $key => $value) {
-    $type = is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR;
-    $stmt->bindValue($key, $value, $type);
-}
-$params = null; //set it to null to avoid issues
-
-
+$stmt = $db->prepare($query); //dynamically generated query
 //$stmt = $db->prepare("SELECT id, name, description, cost, stock, image FROM BGD_Items WHERE stock > 0 LIMIT 50");
 try {
     $stmt->execute($params); //dynamically populated params to bind
@@ -87,7 +55,7 @@ try {
                     <option value="cost">Cost</option>
                     <option value="stock">Stock</option>
                     <option value="name">Name</option>
-                    <option value="category">Category</option>
+                    <option value="created">Created</option>
                 </select>
                 <script>
                     //quick fix to ensure proper value is selected since
