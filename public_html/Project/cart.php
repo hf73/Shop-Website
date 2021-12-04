@@ -76,7 +76,7 @@ if (isset($_GET["drop_cart"])) {
             <div class="card bg-dark w-25">
                 <div class="card-body">
 
-                    <div class="card-text">Name: <?php se($r, "name"); ?></div> 
+                    <div class="card-text">Name: <?php se($r, "name"); ?></div>  
                     <a href="productdetails.php">More Info</a>
                     <div class="card-text">Cost: <?php se($r, "subtotal"); ?></div>
                     <div class="card-text">Quantity :<?php se($r, "desired_quantity", 0); ?>
