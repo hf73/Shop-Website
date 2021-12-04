@@ -1,6 +1,6 @@
 <?php
 require(__DIR__ . "/../../partials/nav.php");
-  
+   
 $db = getDB();
 $results = [];
 if (!isset($user_id)) {
