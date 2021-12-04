@@ -10,7 +10,7 @@ if (!has_role("Admin")) {
 if (isset($_POST["submit"])) {
     if (update_data("Products", $_GET["id"], $_POST)) {
         flash("Updated item", "success");
-    }
+    } 
 }
 
 //get the table definition
