@@ -8,6 +8,7 @@ if (!isset($user_id)) {
 }
 error_log("Cart");
 $stmt = $db->prepare("SELECT c.id, name, image, desired_quantity, description, (desired_quantity * cost) AS subtotal FROM Cart JOIN Products c on product_id = c.id WHERE user_id = :uid and desired_quantity > 0");
+
 try {
     $stmt->execute([":uid" => $user_id]);
     $r = $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -20,7 +21,7 @@ try {
 }
 
 
-if (isset($_GET["delete_item"])){
+if (isset($_GET["delete_item"])){ 
     $db = getDB();
     $item_id = se($_GET, "delete_item", -1, false);
     $stmt = $db->prepare("DELETE FROM Cart WHERE product_id = :id AND user_id = :uid");
@@ -57,15 +58,16 @@ if (isset($_GET["drop_cart"])) {
 ?>
 <h5>CART</h5>
 <div class="row">
-    <?php foreach ($results as $r) : ?>
+    <?php foreach ($results as $r) : 
+        ?>
         <div class="col">
             <div class="card bg-dark w-25">
                 <div class="card-body">
 
-                    <div class="card-text">Name: <?php se($r, "name"); ?></div>
+                    <div class="card-text">Name: <?php se($r, "name"); ?></div> 
+                    <a href="productdetails.php">More Info</a>
                     <div class="card-text">Cost: <?php se($r, "subtotal"); ?></div>
                     <div class="card-text">Quantity :<?php se($r, "desired_quantity", 0); ?>
-                
                 </div>
                 <div class="card-footer">
 
