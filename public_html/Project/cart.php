@@ -55,7 +55,7 @@ if (isset($_GET["drop_cart"])) {
     
     $db = getDB();
     $item_id = se($_GET, "drop_cart", -1, false);
-    $stmt = $db->prepare("DELETE FROM Cart WHERE user_id = :uid");
+    $stmt = $db->prepare("DELETE FROM Cart WHERE user_id = :uid"); 
     
     try{
         $stmt->execute([":uid" => get_user_id()]);
