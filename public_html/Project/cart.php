@@ -20,6 +20,20 @@ try {
     flash("<pre>" . var_export($e, true) . "</pre>");
 }
 
+if (isset($_POST["get_cart"])) {
+    $db = getDB();
+    $results = [];
+    $get_quantity = se($_POST,'desired_quantity', -1, false);
+    $get_cart = se($_POST, "get_cart", -1, false);
+    $stmt = $db->prepare("UPDATE Cart set desired_quantity = :q WHERE product_id = :id AND user_id = :uid");
+   
+    try {
+        $stmt->execute([":q" => $get_quantity, ":id" => $get_cart, ":uid" => get_user_id()]);
+        flash("Updated Quantity", "success");
+    } catch (PDOException $e) {
+        error_log("<pre>" . var_export($e->errorInfo, true));
+    }
+}
 
 if (isset($_GET["delete_item"])){ 
     $db = getDB();
@@ -40,9 +54,7 @@ if (isset($_GET["delete_item"])){
 if (isset($_GET["drop_cart"])) {
     
     $db = getDB();
-
     $item_id = se($_GET, "drop_cart", -1, false);
-
     $stmt = $db->prepare("DELETE FROM Cart WHERE user_id = :uid");
     
     try{
@@ -68,6 +80,12 @@ if (isset($_GET["drop_cart"])) {
                     <a href="productdetails.php">More Info</a>
                     <div class="card-text">Cost: <?php se($r, "subtotal"); ?></div>
                     <div class="card-text">Quantity :<?php se($r, "desired_quantity", 0); ?>
+                    <form method="POST">
+                                <input type="hidden" name="get_cart" value="<?php se($r, 'id');?>"/>
+                                <input type="number" name="desired_quantity" value="<?php se($r, 'desired_quantity');?>"/>
+                                <input class="btn btn-primary" type="submit" value="Update Quantity"/>
+                            </form>
+
                 </div>
                 <div class="card-footer">
 
