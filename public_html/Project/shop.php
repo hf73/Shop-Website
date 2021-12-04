@@ -159,7 +159,7 @@ try {
                     <div class="card-body">
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
-                        <a href="productdetails.php">More Info</a>
+                        <a href="product_details.php">More Info</a>
                         
                         <?php if (has_role("Admin")): ?>
                             <a href="admin/edit_item.php?id=<?php se($item, "id"); ?>">Edit</a>
