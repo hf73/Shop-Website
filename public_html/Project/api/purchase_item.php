@@ -46,7 +46,7 @@ if (isset($_POST["product_id"]) && isset($_POST["desired_quantity"]) && isset($_
         }
     }
     if ($isValid) {
-           // record_purchase($item_id, $user_id, $quantity, $cost);
+           // record_purchase($item_id, $user_id, $quantity, $cost); 
             add_item($item_id, $user_id, $quantity, $cost);
             http_response_code(200);
             $response["message"] = "Added $quantity of $name To Cart";

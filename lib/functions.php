@@ -246,7 +246,7 @@ function record_purchase($item_id, $user_id, $quantity, $cost)
     }
     return false;
 }*/
-function add_item($item_id, $user_id, $quantity = 1)
+function add_item($item_id, $user_id, $quantity = 1) 
 {
     error_log("add_item() Item ID: $item_id, User_id: $user_id, Quantity $quantity");
     //I'm using negative values for predefined items so I can't validate >= 0 for item_id

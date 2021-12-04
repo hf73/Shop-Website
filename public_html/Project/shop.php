@@ -129,7 +129,7 @@ try {
                     console.log(http);
                 }
             }
-            http.open("POST", "api/purchase_item.php", true);
+            http.open("POST", "api/purchase_item.php", true); 
             let data = {
                 product_id: item,
                 desired_quantity: 1,
