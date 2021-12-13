@@ -67,8 +67,14 @@ if (isset($_GET["drop_cart"])) {
     }
 }
 
+
 ?>
+
+
 <h5>CART</h5>
+<?php if (is_logged_in()) : ?>
+            <li><a href="<?php echo get_url('checkout_form.php'); ?>">Checkout</a></li>
+        <?php endif; ?>
 <div class="row">
     <?php foreach ($results as $r) : 
         ?>
@@ -84,7 +90,7 @@ if (isset($_GET["drop_cart"])) {
                                 <input type="hidden" name="get_cart" value="<?php se($r, 'id');?>"/>
                                 <input type="number" name="desired_quantity" value="<?php se($r, 'desired_quantity');?>"/>
                                 <input class="btn btn-primary" type="submit" value="Update Quantity"/>
-                            </form>
+                    </form>
 
                 </div>
                 <div class="card-footer">
@@ -110,3 +116,7 @@ if (isset($_GET["drop_cart"])) {
     </form>
 
 </footer>
+
+<?php if (is_logged_in()) : ?>
+            <li><a href="<?php echo get_url('checkout_form.php'); ?>">Checkout</a></li>
+        <?php endif; ?>
