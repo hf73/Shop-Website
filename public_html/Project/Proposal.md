@@ -83,7 +83,7 @@
 - Milestone 3
   
 <table>
-<tr><td>milestone 1</td></tr><tr><td>
+<tr><td>milestone 3</td></tr><tr><td>
 <table>
 <tr><td>F1 - User will be able to purchase items in their Cart (2021-12-10)</td></tr>
 <tr><td>Status: incomplete</td></tr>
