@@ -81,6 +81,103 @@
  [https://github.com/hf73/IT202-9/pull/58](https://github.com/hf73/IT202-9/pull/58)</p></td></tr><tr><td><table><tr><td>F11 - User will be able to clear their entire cart via a button click<tr><td>Status: completed</td></tr><tr><td><img width="100%" src="https://user-images.githubusercontent.com/70991020/144691279-77a24d12-5d58-4fae-8f19-9aaf21809c60.png"><p>code to remove cart</td></tr></td></tr></table></td></tr></td></tr></table>
   
 - Milestone 3
+  
+<table>
+<tr><td>milestone 1</td></tr><tr><td>
+<table>
+<tr><td>F1 - User will be able to purchase items in their Cart (2021-12-10)</td></tr>
+<tr><td>Status: incomplete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/008_create_table_order.sql](https://hf73-prod.herokuapp.com/Project/sql/008_create_table_order.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/70](https://github.com/hf73/IT202-9/pull/70)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create an Orders table (id, user_id, created, total_price, address, payment_method)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884235-c94ee567-2dce-45ae-bbe8-efd4fe901e49.png">
+<p>Orders table</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create an OrderItems table (id, order_id, product_id, quantity, unit_price)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884299-71a97ca4-943b-411c-ae2a-d679645daf60.png">
+<p>Orders item table</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Checkout Form</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884980-a6ebdeb9-4951-4247-8567-b898761db56f.png">
+<p>Checkout form asking for payment method not card number</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - User will be asked for their Address for shipping purposes</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/ff0000/000000?text=incomplete"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145885076-c4288a2f-eaa0-4eb9-89b4-25f7bf7410f2.png">
+<p>A form is present however could not figure out how to validate it, tried validating on purchasing using the isset($_POST("purchase") and then validating to see if it is null after, however it did not work.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F2 - Feature 2 (2021-12-10)</td></tr>
+<tr><td>Status: pending</td></tr>
+<tr><td>Links:</td></tr>
+<tr><td>PRs:</td></tr>
+<tr><td>
+<table>
+<tr><td>F2 - item 1</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/808080/ffffff?text=pending"></td></tr>
+
+<tr><td>
+<img width="768px" src="">
+<p></p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr></td></tr></table>
 - Milestone 4
 ### Intructions
 #### Don't delete this
