@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS Orders(
     FOREIGN KEY (user_id) REFERENCES Users(id),
     UNIQUE KEY (user_id)
 
-) 
+)  
