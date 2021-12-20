@@ -8,6 +8,6 @@ CREATE TABLE IF NOT EXISTS OrderItems(
 
     FOREIGN KEY (product_id) REFERENCES Products(id),
     FOREIGN KEY (order_id) REFERENCES Orders(id),
-   
+    UNIQUE KEY (product_id, user_id),
     UNIQUE KEY (order_id, product_id)
 )
