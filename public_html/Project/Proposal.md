@@ -23,6 +23,186 @@
 ### Proposal Checklist and Evidence
 
 - Milestone 1
+- [x] (10/07/2021 of completion) User will be able to register a new account
+  -  List of Evidence of Feature Completion
+    - Status: Completed 
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/register.php
+    - Pull Requests
+       - https://github.com/hf73/IT202-9/pull/4
+    - screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/70991020/141411762-21671faf-6a3e-47fa-925f-969f1f75dff8.png)
+        - Screenshot #1 Form Fields for Username, Email, Passowrd, Confirm password are valid
+      
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141333117-42ad72b0-975b-457a-8a22-ddecbe5884c1.png)
+        - Screenshot #2 Users Table 
+       
+       - Screenshot #3 ![image](https://user-images.githubusercontent.com/70991020/141334382-93487185-4d80-4fb8-823e-d81afd04963f.png)
+         - Screenshot #3 Passwords must be hashed
+       
+       - Screenshot #4 ![image](https://user-images.githubusercontent.com/70991020/141334593-337a701f-2522-4c4e-a855-fad7c0767b70.png)
+         - Screenshot #4 Getting error message for Email not being unique
+       
+       - Screenshot #5 ![image](https://user-images.githubusercontent.com/70991020/141334792-c67b8d64-233b-41ca-bda8-685f7836798d.png)
+         - Screenshot #5 Error message for username not being unique
+       
+       - Screenshot #6 ![image](https://user-images.githubusercontent.com/70991020/141354496-fb642f63-f1e2-4acd-8773-3a49c9a14477.png)
+         - Screenshot #6 System should let you know if username or email is taken, only passwords are removed
+
+
+- [x] (11/11/2021 of completion) User will be able to login to their account
+  -  List of Evidence of Feature Completion
+    - Status: Completed 
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/login.php
+    - Pull Requests
+       - https://github.com/hf73/IT202-9/pull/38
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/70991020/141377547-de0aeb5e-03d5-4540-9648-c36ba07a4d86.png)
+        - Screenshot #1 Attempting to login with Email
+      
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141377632-75773894-d913-408a-98cb-3e6bf02bf023.png)
+        - Screenshot #2 Successful login with email
+
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/70991020/141377720-df417014-72ae-4f68-a26f-8cbdea26ce54.png)
+        - Screenshot #3 Attempting to login with Username
+      
+      - Screenshot #4 ![image](https://user-images.githubusercontent.com/70991020/141377754-d851d3c7-4cd5-4187-bc7a-13fe37b9d00c.png)
+        - Screenshot #4 Successful login with username
+      
+      - Screenshot #5 ![image](https://user-images.githubusercontent.com/70991020/141377777-c0a60e3d-e693-43c4-90e3-837e2b5b7c87.png)
+        - Screenshot #5 Trying to login with an account that doesn't exist
+      
+      - Screenshot #6 ![image](https://user-images.githubusercontent.com/70991020/141379360-afc73dff-1cd2-40c8-9c90-9efcdf92306c.png)
+        - Screenshot #6 Trying to login with an incorrect password
+      
+      - Screenshot #7 ![image](https://user-images.githubusercontent.com/70991020/141377862-2c5a74c9-5f1f-471e-8bce-96df50cd7007.png)
+        - Screenshot #7 Logging in fetching user's roles and information
+      
+      - Screenshot #8 ![image](https://user-images.githubusercontent.com/70991020/141377897-05025398-1d6b-481d-8671-6c1dcc2d8313.png)
+        - Screenshot #8 User is redirected to Home page on login
+      
+      - Screenshot #9 ![image](https://user-images.githubusercontent.com/70991020/141377983-6db4b4a3-95c2-40e2-a0d8-9eaa0f9d5f6a.png)
+        - Screenshot #9 The page is protected
+
+  
+
+- [x] (11/11/2021 of completion) User will be able to logout
+  -  List of Evidence of Feature Completion
+    - Status: Completed 
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/logout.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/39/
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/70991020/141379193-b7f6dfc3-ac7b-457d-a4b6-a89f098d3e45.png)
+        - Screenshot #1 Successful logout message + redirected to login page
+      
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141379236-08824810-5102-4243-8940-b48f8712acd7.png)
+        - Screenshot #2 Page is protected and you can't go back
+      
+- [x] (11/11/yyyy of completion) Basic Security Rules Implemented
+  -  List of Evidence of Feature Completion
+    - Status: Completed (Completed, Partially working, Incomplete, Pending)
+    - Direct Link: 
+      - https://hf73-prod.herokuapp.com/Project/login.php
+      - https://hf73-prod.herokuapp.com/Project/admin/list_roles.php
+      - https://hf73-prod.herokuapp.com/Project/admin/assign_roles.php
+      - https://hf73-prod.herokuapp.com/Project/admin/create_role.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/40
+    - Screenshots
+      - Screenshot #1 ![image](https://user-images.githubusercontent.com/70991020/141409642-11f4098b-b28f-4dbf-95d6-ade1b07e5b1f.png)
+        - Screenshot #1 security showing that you must be logged in to view page
+
+      - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141409672-9f47c868-60a3-4534-a055-f6076acf644a.png)
+        - Screenshot #2 Code to check if user is logged in
+
+      - Screenshot #3 ![image](https://user-images.githubusercontent.com/70991020/141409693-664e79f5-d96d-4a48-ab88-47d7eea11064.png)
+        - Screenshot #3 Access not allowed to admin page
+
+      - Screenshot #4 ![image](https://user-images.githubusercontent.com/70991020/141409737-492926a1-1e72-40e3-9496-1fe541b85e10.png)
+        - Screenshot #4 table showing roles given to users
+
+      - Screenshot #5 ![image](https://user-images.githubusercontent.com/70991020/141409764-e644819a-9791-40fd-83b2-b5002a401b09.png)
+        - Screenshot #5 avaiable roles
+        
+
+- [x] (11/11/2021 of completion) Basic Roles Implemented
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: 
+      - https://hf73-prod.herokuapp.com/Project/admin/list_roles.php
+      - https://hf73-prod.herokuapp.com/Project/admin/assign_roles.php
+      - https://hf73-prod.herokuapp.com/Project/admin/create_role.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/41
+    - Screenshots
+    - Screenshot #1 ![image](https://user-images.githubusercontent.com/70991020/141410141-b5687903-4923-45f0-b60b-8b2efb097052.png)
+        - Screenshot #1 Roles table
+
+     - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141410194-fb9f4252-75b8-43ec-84bc-036a35c25b4e.png)
+        - Screenshot #2 User roles table
+        
+     - Screenshot #3 ![image](https://user-images.githubusercontent.com/70991020/141410267-9f03a0b8-2196-4d33-974f-36c8d4a35a95.png)
+        - Screenshot #3 entry not allowed without permission
+
+
+- [x] (11/11/2021 of completion) Site should have basic styles/theme applied; everything should be styled
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/nav.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/35
+    - Screenshots
+     - Screenshot #1 <img width="1128" alt="adding styling" src="https://user-images.githubusercontent.com/70991020/141322666-543043d6-43b9-4e0a-91f4-ccaec164daf5.PNG">
+        - Screenshot #1 Capture of the current style of the page
+          
+
+
+- [x] (11/11/2021 of completion) Any output messages/errors should be “user friendly”
+  -  List of Evidence of Feature Completion
+    - Status: Completed
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/flash.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/5
+    - Screenshots
+     - Screenshot #1 <img width="1128" alt="user friendly error messages" src="https://user-images.githubusercontent.com/70991020/141326103-20be3faa-4f20-4c54-8cf7-ec16471fc664.PNG">
+        - Screenshot #1 Screenshot of invalid password error message
+     
+     - Screenshot #2 <img width="1128" alt="user friendly error messages invalid email" src="https://user-images.githubusercontent.com/70991020/141326194-60808756-3a5c-44a1-8764-36dee40d46b9.PNG">
+        - Screenshot #2 Screenshot of invalid email address error message
+          
+    - Screenshot #3 ![image](https://user-images.githubusercontent.com/70991020/141410766-cab55388-e8d5-4649-be6e-365650c3111f.png)
+        - Screenshot #3 removed non user friendly messages that was shown previously.
+
+- [x] (11/11/2021 of completion) User will be able to see their profile
+  -  List of Evidence of Feature Completion
+    - Status: Completed 
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/profile.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/42
+    - Screenshots
+     -  Screenshot #1 <img width="1128" alt="see and edit profile" src="https://user-images.githubusercontent.com/70991020/141323979-98f66295-158d-4b78-9400-d4e7ccc34dd9.PNG">
+        - Screenshot #1 Capture of Profile button on top and being able to see profile.
+          
+
+
+
+- [x] (11/11/2021 of completion) User will be able to edit their profile
+  -  List of Evidence of Feature Completion
+    - Status: Completed 
+    - Direct Link: https://hf73-prod.herokuapp.com/Project/profile.php
+    - Pull Requests
+      - https://github.com/hf73/IT202-9/pull/42
+    - Screenshots
+     - Screenshot #1 <img width="1128" alt="updated profile" src="https://user-images.githubusercontent.com/70991020/141324974-5d9c9f20-d49c-4efa-9ebb-8650a9f6a39a.PNG"> 
+        - Screenshot #1 Capture of User updating password in profile.
+
+     - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141411663-4e668c61-33fe-466a-9854-35960aefc063.png)
+        - Screenshot #2 Checking if username is available
+           
+    - Screenshot #2 ![image](https://user-images.githubusercontent.com/70991020/141411683-2a01ec06-d04e-44d7-8bc5-6174dff9b676.png)
+        - Screenshot #2 validating if current password is correct
+        
+
 
 <table><tr><td>milestone 2</td></tr><tr><td><table><tr><td>F1 - User with an admin role or shop owner role will be able to add products to inventory (2021-12-03)</td></tr><tr><td>Status: complete</td></tr><tr><td>Links:<p>
 
@@ -81,7 +261,236 @@
  [https://github.com/hf73/IT202-9/pull/58](https://github.com/hf73/IT202-9/pull/58)</p></td></tr><tr><td><table><tr><td>F11 - User will be able to clear their entire cart via a button click<tr><td>Status: completed</td></tr><tr><td><img width="100%" src="https://user-images.githubusercontent.com/70991020/144691279-77a24d12-5d58-4fae-8f19-9aaf21809c60.png"><p>code to remove cart</td></tr></td></tr></table></td></tr></td></tr></table>
   
 - Milestone 3
-- Milestone 4
+  
+<table>
+<tr><td>milestone 3</td></tr><tr><td>
+<table>
+<tr><td>F1 - User will be able to purchase items in their Cart (2021-12-10)</td></tr>
+<tr><td>Status: incomplete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/008_create_table_order.sql](https://hf73-prod.herokuapp.com/Project/sql/008_create_table_order.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/70](https://github.com/hf73/IT202-9/pull/70)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create an Orders table (id, user_id, created, total_price, address, payment_method)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884235-c94ee567-2dce-45ae-bbe8-efd4fe901e49.png">
+<p>Orders table</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create an OrderItems table (id, order_id, product_id, quantity, unit_price)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884299-71a97ca4-943b-411c-ae2a-d679645daf60.png">
+<p>Orders item table</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Checkout Form</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145884980-a6ebdeb9-4951-4247-8567-b898761db56f.png">
+<p>Checkout form asking for payment method not card number</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - User will be asked for their Address for shipping purposes</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/ff0000/000000?text=incomplete"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/145885076-c4288a2f-eaa0-4eb9-89b4-25f7bf7410f2.png">
+<p>A form is present however could not figure out how to validate it, tried validating on purchasing using the isset($_POST("purchase") and then validating to see if it is null after, however it did not work.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F2 - Feature 2 (2021-12-10)</td></tr>
+<tr><td>Status: pending</td></tr>
+<tr><td>Links:</td></tr>
+<tr><td>PRs:</td></tr>
+<tr><td>
+<table>
+<tr><td>F2 - item 1</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/808080/ffffff?text=pending"></td></tr>
+
+<tr><td>
+<img width="768px" src="">
+<p></p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr></td></tr></table>
+
+<table>
+<tr><td>milestone 4</td></tr><tr><td>
+<table>
+<tr><td>F1 - User will be able to rate a product they purchased ()</td></tr>
+<tr><td>Status: incomplete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/010_create_table_ratings.sql](https://hf73-prod.herokuapp.com/Project/sql/010_create_table_ratings.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/74](https://github.com/hf73/IT202-9/pull/74)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create table called Ratings (id, product_id, user_id, rating, comment, created)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845334-4d673168-e44d-417b-adf6-0318d1eb5b39.png">
+<p>Created a ratings table with id, product_id, user_id, rating, comment, created.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - 1-5 ratings</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845538-d6dc9af1-e865-46c6-a428-3bcf7c32aaab.png">
+<p>Created a check to make sure that the rating is between 1 and 5</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Text Comment (use TEXT data type in sql)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845650-07739de3-adfc-4c31-8f1c-06b73c377350.png">
+<p>comment is using text data type</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Ratings and Rating Comments will be visible on the Product Details page</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/ff0000/000000?text=incomplete"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146975856-d95a0b42-f417-4fe0-b9e4-5ea1b1dc98d5.png">
+<p>I tried merging tables using the JOIN statement then going through that I tried to call it in order to output the ratings, this did not work as I could not make the JOIN statement work, I believe product_id = c.id was incorrect because it was referencing ratings id not product id but I was unable to fix it.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F2 - User can set their profile to be public or private (will need another column in Users table) ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/011_insert_column_profile_privacy.sql](https://hf73-prod.herokuapp.com/Project/sql/011_insert_column_profile_privacy.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/75](https://github.com/hf73/IT202-9/pull/75)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F2 - If public, hide email address from other users</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146963574-e152cdb8-24c3-434e-bbdf-20eee57ab811.png">
+<p>using a visibility option with 0 being private just like the product on the shop page.</p>
+</td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146972633-05ca72df-887a-4824-8016-44d7d08547a5.png">
+<p>Private/public box</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F3 - Add pagination to Shop Page (and any other product lists not yet mentioned) (2021-12-21)</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/partials/pagination.php](https://hf73-prod.herokuapp.com/partials/pagination.php)</p><p>
+
+ [https://hf73-prod.herokuapp.com/Project/shop.php](https://hf73-prod.herokuapp.com/Project/shop.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/76](https://github.com/hf73/IT202-9/pull/76)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F3 - pagination</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146968355-5678d814-0557-45c7-81be-96a44531cfdd.png">
+<p>Multiple pages when listings exceed limit</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr></td></tr></table>
 ### Intructions
 #### Don't delete this
 1. Pick one project type
