@@ -358,7 +358,139 @@
 </table>
 </td>
 </tr></td></tr></table>
-- Milestone 4
+
+<table>
+<tr><td>milestone 4</td></tr><tr><td>
+<table>
+<tr><td>F1 - User will be able to rate a product they purchased ()</td></tr>
+<tr><td>Status: incomplete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/010_create_table_ratings.sql](https://hf73-prod.herokuapp.com/Project/sql/010_create_table_ratings.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/74](https://github.com/hf73/IT202-9/pull/74)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F1 - Create table called Ratings (id, product_id, user_id, rating, comment, created)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845334-4d673168-e44d-417b-adf6-0318d1eb5b39.png">
+<p>Created a ratings table with id, product_id, user_id, rating, comment, created.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - 1-5 ratings</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845538-d6dc9af1-e865-46c6-a428-3bcf7c32aaab.png">
+<p>Created a check to make sure that the rating is between 1 and 5</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Text Comment (use TEXT data type in sql)</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146845650-07739de3-adfc-4c31-8f1c-06b73c377350.png">
+<p>comment is using text data type</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr><td>
+<table>
+<tr><td>F1 - Ratings and Rating Comments will be visible on the Product Details page</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/ff0000/000000?text=incomplete"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146975856-d95a0b42-f417-4fe0-b9e4-5ea1b1dc98d5.png">
+<p>I tried merging tables using the JOIN statement then going through that I tried to call it in order to output the ratings, this did not work as I could not make the JOIN statement work, I believe product_id = c.id was incorrect because it was referencing ratings id not product id but I was unable to fix it.</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F2 - User can set their profile to be public or private (will need another column in Users table) ()</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/Project/sql/011_insert_column_profile_privacy.sql](https://hf73-prod.herokuapp.com/Project/sql/011_insert_column_profile_privacy.sql)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/75](https://github.com/hf73/IT202-9/pull/75)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F2 - If public, hide email address from other users</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146963574-e152cdb8-24c3-434e-bbdf-20eee57ab811.png">
+<p>using a visibility option with 0 being private just like the product on the shop page.</p>
+</td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146972633-05ca72df-887a-4824-8016-44d7d08547a5.png">
+<p>Private/public box</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<table>
+<tr><td>F3 - Add pagination to Shop Page (and any other product lists not yet mentioned) (2021-12-21)</td></tr>
+<tr><td>Status: complete</td></tr>
+<tr><td>Links:<p>
+
+ [https://hf73-prod.herokuapp.com/partials/pagination.php](https://hf73-prod.herokuapp.com/partials/pagination.php)</p><p>
+
+ [https://hf73-prod.herokuapp.com/Project/shop.php](https://hf73-prod.herokuapp.com/Project/shop.php)</p></td></tr>
+<tr><td>PRs:<p>
+
+ [https://github.com/hf73/IT202-9/pull/76](https://github.com/hf73/IT202-9/pull/76)</p></td></tr>
+<tr><td>
+<table>
+<tr><td>F3 - pagination</td></tr>
+<tr><td>Status: 
+<img width="100" height="20" src="https://via.placeholder.com/400x120/009955/fff?text=completed"></td></tr>
+
+<tr><td>
+<img width="768px" src="https://user-images.githubusercontent.com/70991020/146968355-5678d814-0557-45c7-81be-96a44531cfdd.png">
+<p>Multiple pages when listings exceed limit</p>
+</td></tr>
+
+</td>
+</tr>
+</table>
+</td>
+</tr></td></tr></table>
 ### Intructions
 #### Don't delete this
 1. Pick one project type
