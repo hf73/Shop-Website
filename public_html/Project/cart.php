@@ -79,7 +79,7 @@ if (isset($_GET["drop_cart"])) {
     <?php foreach ($results as $r) : 
         ?>
         <div class="col">
-            <div class="card bg-dark w-25">
+            <div class="card ">
                 <div class="card-body">
 
                     <div class="card-text">Name: <?php se($r, "name"); ?></div>  

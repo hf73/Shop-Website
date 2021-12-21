@@ -144,12 +144,13 @@ try {
     }
 </script>
 
+
 <div class="container-fluid">
     <h1>Shop</h1>
     <div class="row row-cols-1 row-cols-md-5 g-4">
         <?php foreach ($results as $item) : ?>
             <div class="col">
-                <div class="card bg-dark">
+                <div class="card">
                     <div class="card-header">
                     </div>
                     <?php if (se($item, "image", "", false)) : ?>
@@ -160,7 +161,7 @@ try {
                         <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
                         <p class="card-text">Description: <?php se($item, "description"); ?></p>
                         <a href="product_details.php?id=<?php se($item, "id"); ?>">More Info</a>
-                        
+ 
                         <?php if (has_role("Admin")): ?>
                             <a href="admin/edit_item.php?id=<?php se($item, "id"); ?>">Edit</a>
 
