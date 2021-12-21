@@ -9,7 +9,6 @@ $stmt = $db->prepare("SELECT * FROM Products where id = :id");
 try{
     $stmt->execute([":id" => $id]);
     $item = $stmt->fetch(PDO::FETCH_ASSOC);
-    echo "<pre>" . var_export($item, true) . "</pre>";
 
 } catch (PDOException $e) {
     var_export($e);
@@ -30,3 +29,8 @@ try{
 
                     <div class="card-footer">
                     </div>
+
+
+<?php
+require(__DIR__ . "/../../partials/flash.php");
+?>
