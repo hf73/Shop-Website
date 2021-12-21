@@ -174,6 +174,7 @@ try {
             </div>
         <?php endforeach; ?>
     </div>
+    <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
 </div>
 
 <?php
