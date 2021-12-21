@@ -101,7 +101,7 @@ if (isset($_POST["get_cart"])) {
       </h4>
     
       <div class="card-text">Name: <?php se($r, "name"); ?></div>  
-                    <a href="productdetails.php">More Info</a>
+                    <a href="product_details.php?id=<?php se($r, "id"); ?>">More Info</a>
                     <div class="card-text">Cost: <?php se($r, "subtotal"); ?></div>
                 </div>
       <hr>
