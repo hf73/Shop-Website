@@ -57,6 +57,9 @@ if (isset($_POST["itemName"])) {
         </table>
     <?php endif; ?>
 </div>
+
+
+
 <?php
 //note we need to go up 1 more directory
 require_once(__DIR__ . "/../../../partials/flash.php");
