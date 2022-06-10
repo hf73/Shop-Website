@@ -1,3 +1,4 @@
+
 <?php
 require(__DIR__ . "/../../partials/nav.php");
  
@@ -142,8 +143,41 @@ try {
         }
         //TODO create JS helper to update all show-balance elements
     }
-                    if (http.status === 200) {
+</script>
 
+
+<div class="container-fluid">
+    <h1>Shop</h1>
+    <div class="row row-cols-1 row-cols-md-5 g-4">
+        <?php foreach ($results as $item) : ?>
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                    </div>
+                    <?php if (se($item, "image", "", false)) : ?>
+                        <img src="<?php se($item, "image"); ?>" class="card-img-top" alt="...">
+                    <?php endif; ?>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Name: <?php se($item, "name"); ?></h5>
+                        <p class="card-text">Description: <?php se($item, "description"); ?></p>
+                        <a href="product_details.php?id=<?php se($item, "id"); ?>">More Info</a>
+ 
+                        <?php if (has_role("Admin")): ?>
+                            <a href="admin/edit_item.php?id=<?php se($item, "id"); ?>">Edit</a>
+
+                        <?php endif;?>
+                    </div>
+                    <div class="card-footer">
+                        Cost: <?php se($item, "cost"); ?>
+                        <button onclick="purchase('<?php se($item, 'id'); ?>','<?php se($item, 'cost'); ?>')" class="btn btn-primary">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+    <?php include(__DIR__ . "/../../partials/pagination.php"); ?>
+</div>
 
 <?php
 require(__DIR__ . "/../../partials/flash.php");
